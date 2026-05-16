@@ -8,9 +8,9 @@
 
 [project]
 site_name = "Streaming Data"
-site_url = "https://denisecase.github.io/streaming-01-foundations/"
-repo_url = "https://github.com/denisecase/streaming-01-foundations"
-repo_name = "denisecase/streaming-01-foundations"
+site_url = "https://vnallam09.github.io/streaming-01-foundations/"
+repo_url = "https://github.com/vnallam09/streaming-01-foundations"
+repo_name = "vnallam09/streaming-01-foundations"
 site_description = "Project documentation"
 docs_dir = "docs" # source directory for documentation markdown files
 site_dir = "site" # output directory for generated site (ignored by Git; not in repo)
@@ -19,7 +19,7 @@ edit_uri = "edit/main/docs/" # "Edit this page" links (GitHub)
 [project.extra]
 # WHY: Social links provide easy access to project repositories and profiles.
 social = [
-    {icon = "fontawesome/brands/github", link = "https://github.com/denisecase/streaming-01-foundations" },
+    {icon = "fontawesome/brands/github", link = "https://github.com/vnallam09/streaming-01-foundations" },
 ]
 
 # ------------------------------------------------------------

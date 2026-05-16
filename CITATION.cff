@@ -20,9 +20,12 @@ authors:
     given-names: Denise M.
     orcid: "https://orcid.org/0000-0001-6165-7389"
     affiliation: "Northwest Missouri State University, School of Computer Science and Information Systems, Maryville, MO, USA"
+  - family-names: Nallamothu
+    given-names: Venkat Teja
+    affiliation: "Northwest Missouri State University"
 
-repository-code: "https://github.com/denisecase/streaming-01-foundations"
-url: "https://github.com/denisecase/streaming-01-foundations"
+repository-code: "https://github.com/vnallam09/streaming-01-foundations"
+url: "https://github.com/vnallam09/streaming-01-foundations"
 license: MIT
 
 abstract: >

@@ -241,9 +241,27 @@ Verify Kafka is reachable, then start the consumer.
 ```shell
 clear
 uv run python -m streaming.consumer_case
+
+# Teja's consumer (writes to data/output/consumed_sales_teja.csv)
+uv run python -m streaming.consumer_teja
 ```
 
 </details>
+
+## Observations (Venkat Teja Nallamothu)
+
+- The producer and consumer run independently in separate terminals — the producer writes rows
+  into a CSV file (simulating a Kafka topic) and the consumer polls that same file for new rows
+  on its own schedule. They never call each other directly.
+- This decoupled design means a business can scale by adding more consumer processes to share
+  load as message volume grows. In real Kafka, this is done by assigning multiple consumers to
+  the same consumer group.
+- Messages are preserved in the topic file until explicitly cleared
+  (`KAFKA_CLEAR_TOPIC_ON_START=true`). Setting this to `false` in production would allow
+  late-joining consumers to replay past messages — this is the "replication" concept that keeps
+  important messages from getting lost.
+- Running with `PRODUCER_MESSAGE_COUNT=6` (vs. the default 3) confirmed the producer streams
+  each sale individually with a 2-second interval, and the consumer catches up in real time.
 
 ## Notes
 
